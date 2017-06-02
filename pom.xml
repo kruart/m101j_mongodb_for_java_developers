@@ -16,6 +16,7 @@
         <mongodb.driver.version>3.4.2</mongodb.driver.version>
         <spark.version>2.6.0</spark.version>
         <slf4j-simple.version>1.7.25</slf4j-simple.version>
+        <freemarker.version>2.3.23</freemarker.version>
     </properties>
 
     <dependencies>
@@ -38,11 +39,19 @@
             <version>${spark.version}</version>
         </dependency>
 
+        <!--slf4j-simple needs for spark dependency-->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
             <version>${slf4j-simple.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <version>${freemarker.version}</version>
+        </dependency>
+
 
     </dependencies>
 
