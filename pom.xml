@@ -8,12 +8,14 @@
     <artifactId>M101J</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>A custom project using myfaces</name>
-    <url>http://www.myorganization.org</url>
+    <name>M101J_mongodb</name>
 
     <properties>
         <java.version>1.8</java.version>
         <junit.version>4.12</junit.version>
+        <mongodb.driver.version>3.4.2</mongodb.driver.version>
+        <spark.version>2.6.0</spark.version>
+        <slf4j-simple.version>1.7.25</slf4j-simple.version>
     </properties>
 
     <dependencies>
@@ -22,6 +24,24 @@
             <artifactId>junit</artifactId>
             <version>${junit.version}</version>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>${mongodb.driver.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sparkjava</groupId>
+            <artifactId>spark-core</artifactId>
+            <version>${spark.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>${slf4j-simple.version}</version>
         </dependency>
 
     </dependencies>
