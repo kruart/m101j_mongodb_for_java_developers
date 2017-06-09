@@ -1,4 +1,4 @@
-package com.mongodb;
+package com.mongodb.examples;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;

@@ -1,4 +1,4 @@
-package com.mongodb;
+package com.mongodb.examples;
 
 /**
  * Created by kruart on 02.06.2017.
