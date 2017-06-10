@@ -40,10 +40,22 @@
         </dependency>
 
         <!--slf4j-simple needs for spark dependency-->
+        <!--<dependency>-->
+            <!--<groupId>org.slf4j</groupId>-->
+            <!--<artifactId>slf4j-simple</artifactId>-->
+            <!--<version>${slf4j-simple.version}</version>-->
+        <!--</dependency>-->
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+
         <dependency>
             <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>${slf4j-simple.version}</version>
+            <artifactId>jul-to-slf4j</artifactId>
+            <version>1.7.9</version>
         </dependency>
 
         <dependency>
