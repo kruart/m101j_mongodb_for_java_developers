@@ -14,7 +14,7 @@ import java.io.StringWriter;
  */
 public class Helpers {
     public static void printJson(Document document) {
-        JsonWriter jsonWriter = new JsonWriter(new StringWriter(), new JsonWriterSettings(JsonMode.SHELL, true)); //true - use formatting json
+        JsonWriter jsonWriter = new JsonWriter(new StringWriter(), new JsonWriterSettings(JsonMode.SHELL, false)); //true - use formatting json
         new DocumentCodec().encode(jsonWriter, document, EncoderContext.builder()
                                                                        .isEncodingCollectibleDocument(true)
                                                                        .build());
