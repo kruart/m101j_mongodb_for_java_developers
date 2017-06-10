@@ -1,4 +1,4 @@
-package com.mongodb.examples;
+package com.mongodb.week1.examples;
 
 import spark.Spark;
 

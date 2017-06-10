@@ -1,5 +1,6 @@
-package com.mongodb;
+package com.mongodb.week2.crud;
 
+import com.mongodb.week2.util.Helpers;
 import org.bson.Document;
 import org.bson.types.ObjectId;
 

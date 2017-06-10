@@ -1,4 +1,4 @@
-package com.mongodb;
+package com.mongodb.week2.util;
 
 import org.bson.Document;
 import org.bson.codecs.DocumentCodec;
