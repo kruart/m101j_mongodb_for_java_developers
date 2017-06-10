@@ -9,7 +9,7 @@ import org.bson.Document;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.mongodb.week2.util.Helpers.printJson;
+import static com.mongodb.util.Helpers.printJson;
 
 /**
  * Created by kruart on 10.06.2017.
