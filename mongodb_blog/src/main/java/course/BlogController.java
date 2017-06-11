@@ -33,9 +33,7 @@ import java.io.Writer;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import static spark.Spark.get;
-import static spark.Spark.post;
-import static spark.Spark.setPort;
+import static spark.Spark.*;
 
 /**
  * This class encapsulates the controllers for the blog web application.  It delegates all interaction with MongoDB
@@ -65,7 +63,7 @@ public class BlogController {
         sessionDAO = new SessionDAO(blogDatabase);
 
         cfg = createFreemarkerConfiguration();
-        setPort(8082);
+        port(8082);
         initializeRoutes();
     }
 
@@ -106,7 +104,7 @@ public class BlogController {
 
                // this is where we would normally load up the blog data
                // but this week, we just display a placeholder.
-                HashMap<String, String> root = new HashMap<String, String>();
+                HashMap<String, String> root = new HashMap<>();
 
                 template.process(root, writer);
             }
@@ -123,7 +121,7 @@ public class BlogController {
                 String password = request.queryParams("password");
                 String verify = request.queryParams("verify");
 
-                HashMap<String, String> root = new HashMap<String, String>();
+                HashMap<String, String> root = new HashMap<>();
                 root.put("username", StringEscapeUtils.escapeHtml4(username));
                 root.put("email", StringEscapeUtils.escapeHtml4(email));
 
@@ -155,8 +153,7 @@ public class BlogController {
         // present signup form for blog
         get("/signup", new FreemarkerBasedRoute("signup.ftl") {
             @Override
-            protected void doHandle(Request request, Response response, Writer writer)
-                    throws IOException, TemplateException {
+            protected void doHandle(Request request, Response response, Writer writer) throws IOException, TemplateException {
 
                 SimpleHash root = new SimpleHash();
 
@@ -192,7 +189,6 @@ public class BlogController {
                     SimpleHash root = new SimpleHash();
 
                     root.put("username", username);
-
                     template.process(root, writer);
                 }
             }
@@ -330,7 +326,7 @@ public class BlogController {
         String tagArray[] = tags.split(",");
 
         // let's clean it up, removing the empty string and removing dups
-        ArrayList<String> cleaned = new ArrayList<String>();
+        ArrayList<String> cleaned = new ArrayList<>();
         for (String tag : tagArray) {
             if (!tag.equals("") && !cleaned.contains(tag)) {
                 cleaned.add(tag);
@@ -379,7 +375,7 @@ public class BlogController {
     }
 
     private Configuration createFreemarkerConfiguration() {
-        Configuration retVal = new Configuration();
+        Configuration retVal = new Configuration(new Version("2.3.23"));
         retVal.setClassForTemplateLoading(BlogController.class, "/freemarker");
         return retVal;
     }
