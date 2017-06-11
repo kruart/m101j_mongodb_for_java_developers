@@ -6,8 +6,11 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.mongodb</groupId>
     <artifactId>M101J</artifactId>
-    <packaging>war</packaging>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>mongodb_blog</module>
+    </modules>
     <name>M101J_mongodb</name>
 
     <properties>
@@ -62,6 +65,18 @@
             <groupId>org.freemarker</groupId>
             <artifactId>freemarker</artifactId>
             <version>${freemarker.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.7</version>
         </dependency>
 
 
